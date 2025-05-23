@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video-Holmes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./static/js/leaderboard_testmini.js"></script>  
+    <link href="../css/cs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        .artistic-font {
+            font-family: 'Pacifico', cursive;
+            font-size: 60px; /* 调整字体大小 */
+        }
+      body {
+        background: #fdfcf9 no-repeat fixed top left;
+        font-family:'DM Mono','Open Sans', sans-serif;
+      }
+    </style>
+    <style>
+        .large-icon {
+            font-size: 34px;
+        }
+        a:hover {
+    color: rgb(253, 230, 200);
+        }
+        a {
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="leaderboard.css">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        
+        <div class="container-teasor">
+            <h1><span class="artistic-font">Video-Holmes</span> <br> Can MLLM Think like Holmes for complex video reasoning?</h1>
+        </div>
+        <br> 
+        <br> 
+            <div class="details">
+                <a href="https://donahowe.github.io/">Junhao Cheng</a><sup>1,2</sup>, 
+                <a href="https://geyuying.github.io/">Yuying Ge</a> <sup>1,<i class="fas fa-envelope"></i></sup>, 
+                <a href="http://ttengwang.com/">Teng Wang</a> <sup>1,<i class="fas fa-envelope"></i></sup>, 
+                <a href="https://geyixiao.com/">Yixiao Ge</a> <sup>1</sup>, 
+                <a href="https://scholar.google.com/citations?user=3s9f9VIAAAAJ&hl=en">Jing Liao</a> <sup>2</sup>, 
+                <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ&hl=en">Shan Ying</a> <sup>1</sup></div>
+            <div class="details"><sup>1</sup>ARC Lab, Tencent PCG, <sup>2</sup>City University of Hong Kong</div>
+            
+            <div class="links">
+                <a href="https://github.com/TencentARC/AnimeGamer" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon" style="font-size: 1.5em;">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span style="font-size: 1.2em;"> Github</span>
+                </a>
+                <a href="https://arxiv.org/abs/2504.01014" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon" style="font-size: 1em; vertical-align: middle;">
+                    <img src="images/arxiv_icon.png" alt="arXiv" style="height: 1.5em; vertical-align: -6px;">
+                </span>
+                <span style="font-size: 1.2em;">arXiv</span>
+                </a>
+                <a href="https://huggingface.co/TencentARC/AnimeGamer" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon" style="font-size: 0.8em;">
+                        <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 1.8em;; vertical-align: -6px;">
+                    </span>
+                    <span style="font-size: 1.2em;">Benchmark</span>
+                </a>
+            </div>
+        </div>
+                 
+            
+              
+
+
+    </header>
+    <div class="container main">
+        <section class="section section-abstract">
+            <div class="add-div" style="height: 150px;">
+                <image src="images/Name.png" height="150"/>
+            </div>
+            <h2>Abstract</h2>
+            <div class="abs">
+Video-Holmes is a benchmark designed to evaluate the complex video reasoning capabilities of MLLMs. 
+<br>
+Video-Holmes consists of 1,837 questions derived from 270 manually annotated <b>suspense short films</b>, which spans <b>seven carefully designed tasks</b>. Each task is constructed by first identifying key events and causal relationships within films, and then designing questions that require models to <b>actively locate and connect multiple relevant visual clues scattered across different video segments</b>.
+
+<br>
+⭐ Key Aspects of Video-Holmes:
+
+<ul style="list-style-type: disc; padding-left: 20px;">
+<li><b>One-Click Evaluation:</b> Videos, audios, questions, and evaluation codes are packaged on GitHub and Hugging Face.</li>
+<li><b>High Reasoning Demand:</b> Significant performance gap between reasoning models and non-reasoning models.</li>
+<li><b>Reasoning Process Analysis:</b> Clearly visualizes the reasons behind correct and incorrect model responses.</li>
+</ul>
+
+We aim that Video-Holmes can serve as a <i>"Holmes-test"</i> for multimodal reasoning, motivating models to reason more like humans and emphasizing the ongoing challenges in this field.
+</div>
+</section>
+
+
+    <section class="section section-other" id="leaderboard">
+     <h2>LeaderBoard</h2>
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-full has-text-centered content">
+            <div class="content">
+                Leaderboard of Video-Holmes, where <b>SR</b> means Social Reasoning; <b>IMC</b> means Intentio and Motive Chaining; <b>TCI</b> means Temporal Causal Inference; <b>TA</b> Timeline Analysis; <b>MHR</b> means Multimodal Hint Reasoning; <b>PAR</b> means Physical Anomaly Reasoning; <b>CTI</b> means Core Theme Inference.
+              <table class="js-sort-table" id="results">
+                <thead>
+                  <tr>
+                    <th rowspan="1" style="vertical-align: middle;"><strong>#</strong></th>
+                    <th rowspan="1" style="vertical-align: middle;"><strong>Model</strong></th>
+                    <th><strong>Audio</strong></th>
+                    <th><strong>SR</strong></th>
+                    <th><strong>IMC</strong></th>
+                    <th><strong>TCI</strong></th>
+                    <th><strong>TA</strong></th>
+                    <th><strong>MHR</strong></th>
+                    <th><strong>PAR</strong></th>
+                    <th><strong>CTI</strong></th>
+                    <th><strong>Avg</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><b class="best-score-text">o1 🥇</b></td>
+                    <td>✅</td>
+                    <td><b>66.7</b></td>
+                    <td><b>52.2</b></td>
+                    <td><u>56.9</u></td>
+                    <td><b>74.3</b></td>
+                    <td><b>61.0</b></td>
+                    <td><b>60.2</b></td>
+                    <td>0.0</td>
+                    <td><b>56.7</b></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><b class="best-score-text">Gemini-2.0-Flash 🥈</b></td>
+                    <td>❌</td>
+                    <td><u>66.2</u></td>
+                    <td><u>51.2</u></td>
+                    <td><b>62.0</b></td>
+                    <td>64.4</td>
+                    <td><u>54.1</u></td>
+                    <td><u>58.1</u></td>
+                    <td><b>4.2</b></td>
+                    <td><u>51.7</u></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><b class="best-score-text">GPT-4o 🥉</b></td>
+                    <td>✅</td>
+                    <td>54.7</td>
+                    <td>49.1</td>
+                    <td>44.8</td>
+                    <td><u>68.6</u></td>
+                    <td>48.9</td>
+                    <td>57.6</td>
+                    <td><u>2.8</u></td>
+                    <td>46.9</td>
+                  </tr>
+                  <tr></tr>
+                    <td>4</td>
+                    <td><b>Gemini</b></td>
+                    <td>✅</td>
+                    <td>54.7</td>
+                    <td>49.1</td>
+                    <td>44.8</td>
+                    <td><u>68.6</u></td>
+                    <td>48.9</td>
+                    <td>57.6</td>
+                    <td><u>2.8</u></td>
+                    <td>46.9</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-other">
+        <h2>Construction and Evaluation Pipeline</h2>
+        <p>We select 270 high-quality suspense short films for human annotation. Next, we design 7 challenging tasks and employ DeepSeek to generate questions. Finally, we evaluate SOTA MLLMs and use DeepSeek to analyze their responses (optional).</p>
+        <img src="images/pipeline.png" alt="Teaser Image" style="width: 100%; height: auto;">
+    </section>
+
+    <section class="section section-other">
+        <h2>Question Types</h2>
+        <p>Existing benchmarks primarily involve clue-given questions, where models depend on explicitly provided clues to derive answers. In contrast, Video-Holmes adopts an active seeking paradigm, requiring models to actively locate and connect multiple relevant visual clues scattered across different video segments.</p>
+        <img src="images/Teaser2.png" alt="Teaser Image" style="width: 100%; height: auto;">
+    </section>
+
+
+    <section class="section section-other">
+        <h2>Examples</h2>
+        <div class="abs">Examples of questions, explanations, model answers, and analyses of the reasoning process of Video-Holmes.</div>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <img src="images/app-q1.png">
+                <img src="images/app-q2.png">
+                <img src="images/app-q3.png">
+                <img src="images/app-q4.png">
+                <img src="images/app-q5.png">
+                <img src="images/app-q6.png">
+                <img src="images/app-q7.png">
+            </div>
+            <div class="carousel-buttons">
+                <button id="prev">❮</button>
+                <button id="next">❯</button>
+            </div>
+        </div>
+    </section>
+
+        <section class="section section-other">
+            <h2>Citation</h2>
+            <div>
+                <pre>
+                
+@misc{xxx, 
+    title  =  {Video-Holmes: Can MLLM Think Like Holmes for complex Video Rasoning?}, 
+    author =  {xx},
+    year   =  {xx},
+    url    =  {xx}, 
+}
+                    
+                </pre>
+            </div>
+        </section>
+    </div>
+    <script>
+        const carouselInner = document.querySelector('.carousel-inner');
+        const images = document.querySelectorAll('.carousel img');
+        let currentIndex = 0;
+        let autoPlayInterval;
+    
+        function showImage(index) {
+            const offset = -index * 100; // Assuming each image takes 100% of the container width
+            carouselInner.style.transform = `translateX(${offset}%)`;
+        }
+    
+        function nextImage() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            showImage(currentIndex);
+            resetAutoPlay();
+        }
+    
+        function prevImage() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            showImage(currentIndex);
+            resetAutoPlay();
+        }
+    
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(nextImage, 8000);
+        }
+    
+        document.getElementById('prev').addEventListener('click', prevImage);
+        document.getElementById('next').addEventListener('click', nextImage);
+    
+        // Initialize auto-play
+        autoPlayInterval = setInterval(nextImage, 8000);
+    
+        // Seamless transition between the last and first image
+        carouselInner.addEventListener('transitionend', () => {
+            if (currentIndex === images.length) {
+                carouselInner.style.transition = 'none';
+                currentIndex = 0;
+                showImage(currentIndex);
+                requestAnimationFrame(() => {
+                    carouselInner.style.transition = 'transform 1s ease';
+                });
+            }
+            if (currentIndex === -1) {
+                carouselInner.style.transition = 'none';
+                currentIndex = images.length - 1;
+                showImage(currentIndex);
+                requestAnimationFrame(() => {
+                    carouselInner.style.transition = 'transform 1s ease';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
